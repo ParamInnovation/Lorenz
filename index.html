@@ -17,7 +17,12 @@
 </head>
 
 <body>
+
 	<div id="#text-container"></div>
+	<div class="i-button">
+		
+		<div onclick="displayContent()" class="btn"><button>i</button></div>
+	</div>
 	<div class="slider1Container">
 		<div class="sliderContainer">
 			<div id="slider1">
@@ -44,23 +49,136 @@
 
 
 	</div>
-	<div class="i-button">
-		<div>Are you wondering what it is? </div>
-		<div onclick="displayContent()"><button>i</button></div>
+	<div id="outerContainer">
+		<div id="container">
+			<div id="item" onclick="displayvlueContainer()">
+
+			</div>
+		</div>
+	</div>
+
+	<div class="valueContainer1">
+		<div class="valueContainer">
+			<div class="sliderBlock1">
+				<div class="sblock1" id="uniqueslider"></div>
+				<div class="sblock1" id="uniqueslider1"></div>
+				<div class="sblock1" id="uniqueslider2"></div>
+				<div class="sblock1" id="uniqueslider3"></div>
+				<div class="sblock1 ">
+					<div class="constantValues " id="alphaa">
+						<div class="constantcircle">
+							<div class="constantcircle1">α</div>
+						</div>
+						<div id="alpha"></div>
+					</div>
+					<div class="constantValues" id="betaa">
+						<div class="constantcircle">
+							<div class="constantcircle1"> β</div>
+						</div>
+						<div id="beta"></div>
+					</div>
+					<div class="constantValues" id="gammaa">
+						<div class="constantcircle">
+							<div class="constantcircle1"> γ</div>
+						</div>
+						<div id="gamma"></div>
+					</div>
+				</div>
+			</div>
+			<div class="sliderBlock2"></div>
+			<div class="picker1">
+				<div class="colorPicker1">
+
+					<input type="range" id="colorPicker1" min="0" max="100" step="1" value="0">
+					<div id="colorPreview1"></div>
+
+				</div>
+			</div>
+		</div>
+
+		<div>
+
+		</div>
+
 	</div>
 	<!-- <div class="i-button" onclick="displayContent()"><button>i</button></div> -->
 	<div id="content">
 		<div id="innerContent">
 
-			<div class="displayN">
-				<div>Attractors are patterns or behaviours that systems naturally settle into over time. They can be
+			<div class="displayN displayns">
+				<div class="displaynoneformobile">Attractors are patterns or behaviours that systems naturally settle
+					into over time. They can be
 					thought of as a sort of "magnetic pull" that draws a system toward a specific state or set of
 					states. In everyday life, you might see attractors in the way a pendulum swings to a stop, or how
 					people form habits and routines.</div>
-				<div class="img">
+				<div class="img displaynoneformobile">
 					<img src="image.png" alt="img" id="img">
 				</div>
-				<div><Button onclick="displayN()">Exit</Button></div>
+				<div class="displaynoneformobile"><Button onclick="displayN()">Exit</Button></div>
+				
+				<div class="displaynoneforlargerscreen">
+				
+					<div class="css-slider">
+					
+						<input id="slide-1" type="radio" name="slides" checked>
+						<section class="slide slide-one">
+							
+								<h2 id="headings">Astrophysics</h2>
+					
+							<nav>
+								<label for="slide-3" class="prev">&#10094;</label>
+								<label for="slide-2" class="next">&#10095;</label>
+
+							</nav>
+							<div class="imageContainer">
+								<div class="block imgblock"><img src="nasa-rTZW4f02zY8-unsplash.jpg" alt="" srcset="">
+								</div>
+								<div class="block">Galaxies and Cosmic structures show factral patterns,used to model
+									the universe's large scale structure</div>
+							</div>
+
+						</section>
+						<input id="slide-2" type="radio" name="slides">
+						<section class="slide slide-two">
+							<h2 id="headings">Ocean Current</h2>
+							<nav>
+								<label for="slide-1" class="prev">&#10094;</label>
+								<label for="slide-3" class="next">&#10095;</label>
+
+							</nav>
+							<div class="imageContainer">
+								<div class="block imgblock"><img src="pexels-pixabay-462162.jpg" alt="" srcset=""></div>
+								<div class="block">The Ocean current analysis predicts the complex oceanic movement,imapacting climatic and marine life</div>
+							</div>
+
+						</section>
+						<input id="slide-3" type="radio" name="slides">
+						<section class="slide slide-three">
+							<h2 id="headings">Medical</h2>
+							<nav>
+								<label for="slide-2" class="prev">&#10094;</label>
+								<label for="slide-1" class="next">&#10095;</label>
+
+							</nav>
+							<div class="imageContainer">
+								<div class="block imgblock"><img src="pexels-vidal-balielo-jr-1250655.jpg" alt=""
+										srcset=""></div>
+								<div class="block">Factrol analysis detects the patterns in biological structures to diagonise diseases and monitor treatment</div>
+							</div>
+
+
+						</section>
+						<header>
+							<label for="slide-1" id="slide-1"></label>
+							<label for="slide-2" id="slide-2"></label>
+							<label for="slide-3" id="slide-3"></label>
+						</header>
+					</div>
+				</div>
+				<div class="displaynoneforlargerscreen">
+					Fractal art is a form of digital art that utilizes mathematical algorithms to create self-similar
+					patterns and structures.
+				</div>
 			</div>
 		</div>
 	</div>
@@ -68,24 +186,44 @@
 		<div></div>
 	</div>
 	<div id="moreInfo">
-		<div></div>
+		<div class="moreInfo"></div>
 	</div>
 	<!-- <div id="circle">
         <div id="circle1"></div>
 	</div> -->
 
 	<script>
-		
 
+		let ball = false;
+        let content=false;
 		function displayContent() {
+              content=!content;
+			  if(content){
+				document.getElementById("content").style.display = "block";
+				document.getElementsByClassName("valueContainer")[0].style.display = "none";
+			  }else{
+				document.getElementById("content").style.display = "none";
+			  }
 			
-			document.getElementById("content").style.display = "block"
+			// document.getElementById("displaynoneforlargerscreen").style.display = "block";
+
 		}
 		function displayN() {
 			document.getElementById("content").style.display = "none"
 		}
+		function displayvlueContainer() {
+			ball = !ball;
+			if (ball == true) {
+				document.getElementsByClassName("valueContainer")[0].style.display = "block";
+				document.getElementById("content").style.display = "none";
+
+			} else {
+				document.getElementsByClassName("valueContainer")[0].style.display = "none";
+			}
+
+		}
 		let textfield = document.getElementById("text-container")
-	
+
 		let textfieldmoreInfo = document.getElementById("moreInfo")
 
 		const colorPicker = document.querySelector('#colorPicker');
@@ -363,30 +501,39 @@
 			switch (aType) {
 
 				case 0:
+					b = parseInt(b)
 					textfield.innerHTML = "Lorenz Attractor"
 					$("#slider1").roundSlider("setValue", o);
 					$("#slider3").roundSlider("setValue", b);
 
-
+					document.getElementById("alpha").innerHTML = o;
+					document.getElementById("beta").innerHTML = b;
+					document.getElementById("gamma").innerHTML = p;
 					// $("#slider3").roundSlider("setValue", 3);
 					// text("Lorenz Attractor", 0, -90);
 					break;
 				case 1:
-
+					b = parseInt(b)
 					// text("Chen Attractor", 0, -90);
 					textfield.innerHTML = "Chen Attractor"
 					$("#slider1").roundSlider("setValue", o);
 					$("#slider3").roundSlider("setValue", b);
+					document.getElementById("alpha").innerHTML = o;
+					document.getElementById("beta").innerHTML = b;
+					document.getElementById("gamma").innerHTML = p;
 					break;
 				case 2:
-
+					b = parseInt(b)
 					// text("Modified Chua Chaotic Attractor", 0, -90);
 					textfield.innerText = "Modified Chua Chaotic Attractor"
 					$("#slider1").roundSlider("setValue", o);
 					$("#slider3").roundSlider("setValue", b);
+					document.getElementById("alpha").innerHTML = o;
+					document.getElementById("beta").innerHTML = b;
+					document.getElementById("gamma").innerHTML = p;
 					break;
 				case 3:
-
+					b = parseInt(b)
 					// text("Modified Rossler Attractor", 0, -90);
 					textfield.innerText = "Modified Rossler Attractor"
 					$("#slider1").roundSlider("setValue", o);
@@ -394,9 +541,9 @@
 					break;
 			}
 			textSize(textsize);
-			
+			let sentence = "Note: This is a 3D generative model.  Drag mouse to move around. Press space bar on keyboard to generate new attractor"
 			// text(sentence.toLowerCase(), 0, 90);
-			textfieldmoreInfo.innerText = "Note: This is a generative 3D model. To move around, drag the mouse. On the keyboard, hit the space bar to create a new attractor."
+			textfieldmoreInfo.innerText = "Note: This is a 3D generative model.  Drag mouse to move around. Press space bar on keyboard to generate new attractor"
 			glow();
 			orbit();
 			noFill();
@@ -432,6 +579,7 @@
 			for (let i = 0; i < a.length; i++) {
 				a[i].c = color(hues[i % hues.length], saturation, lightness); // set the color of the attractor based on the stored hue value
 			}
+
 		}
 
 
@@ -439,7 +587,7 @@
 		$("#slider1").roundSlider({
 			radius: 74.82,
 			width: 5,
-			handleSize: "+15",
+			handleSize: "+10",
 			handleShape: "dot",
 			sliderType: "min-range",
 			value: 10,
@@ -482,12 +630,36 @@
 		// 		p = event.value;
 		// 	}
 		// });
-
-
+         
 		$("#slider3").roundSlider({
 			radius: 74.82,
 			width: 5,
-			handleSize: "+15",
+			handleSize: "+10",
+			handleShape: "dot",
+			sliderType: "min-range",
+			value: 3,
+			tooltipFormat: "tooltipVal2",
+			drag: function (event) {
+				// handle slider value changes here
+				console.log("Slider value changed to:", event.value);
+				b = event.value;
+			}
+		});
+		function tooltipVal2(args) {
+			if (b == undefined) {
+				var val = "beta" + " " + 3
+			}
+			if (b != undefined) {
+				var val = "beta" + " " + parseInt(b)
+			}
+
+
+			return val;
+		}
+		$("#uniqueslider").roundSlider({
+			radius: 74.82,
+			width: 5,
+			handleSize: "+10",
 			handleShape: "dot",
 			sliderType: "min-range",
 			value: 3,
@@ -510,12 +682,34 @@
 			return val;
 		}
 
+		function tooltipVal3(args) {
+			if (p == undefined) {
+				var val = "gamma" + " " + 3
+			}
+			if (p != undefined) {
+				var val = "gamma" + " " + parseInt(p)
+			}
+
+
+			return val;
+		}
+
 		colorPicker.addEventListener('input', function () {
 			const hue = this.value;
 			const color = `hsl(${hue}, 100%, 50%)`;
 			colorPreview.style.backgroundColor = color;
 			hues[0] = hue; // store the hue value in an array
 			updateColor(hues);
+			
+		});
+
+		colorPicker1.addEventListener('input', function () {
+			const hue = this.value;
+			const color = `hsl(${hue}, 100%, 50%)`;
+			colorPreview1.style.backgroundColor = color;
+			hues[0] = hue; // store the hue value in an array
+			updateColor(hues);
+			
 		});
 		let zoom = 1.0; // initial zoom level
 
@@ -529,58 +723,236 @@
 			// adjust camera position based on zoom level
 			camera(0, 0, 150 * zoom);
 		}
-		let lastDist = null;
-let currDist = null;
-let scaleFactor = 1;
+		// let lastDist = null;
+		// let currDist = null;
+		// let scaleFactor = 1;
 
-function handleTouchStart(evt) {
-  if (evt.touches.length > 1) {
-    // calculate the distance between the two touch points
-    lastDist = getTouchDistance(evt.touches);
-  }
-}
+		// function handleTouchStart(evt) {
+		// 	if (evt.touches.length > 1) {
+		// 		// calculate the distance between the two touch points
+		// 		lastDist = getTouchDistance(evt.touches);
+		// 	}
+		// }
 
-function handleTouchMove(evt) {
-  if (evt.touches.length > 1) {
-    // calculate the distance between the two touch points
-    currDist = getTouchDistance(evt.touches);
-    
-    if (lastDist !== null && currDist !== null) {
-      // calculate the scaling factor
-      scaleFactor = currDist / lastDist;
-      
-      // apply the scaling factor
-      scale(scaleFactor);
-      
-      // reset the distances
-      lastDist = currDist;
-      currDist = null;
-    }
-  }
-}
+		// function handleTouchMove(evt) {
+		// 	if (evt.touches.length > 1) {
+		// 		// calculate the distance between the two touch points
+		// 		currDist = getTouchDistance(evt.touches);
 
-function handleTouchEnd(evt) {
-  // reset the distances and scaling factor
-  lastDist = null;
-  currDist = null;
-  scaleFactor = 1;
-}
+		// 		if (lastDist !== null && currDist !== null) {
+		// 			// calculate the scaling factor
+		// 			scaleFactor = currDist / lastDist;
 
-function getTouchDistance(touches) {
-  const x1 = touches[0].pageX;
-  const y1 = touches[0].pageY;
-  const x2 = touches[1].pageX;
-  const y2 = touches[1].pageY;
-  
-  return dist(x1, y1, x2, y2);
-}
+		// 			// apply the scaling factor
+		// 			scale(scaleFactor);
 
-// attach the touch event listeners
-document.addEventListener('touchstart', handleTouchStart);
-document.addEventListener('touchmove', handleTouchMove);
-document.addEventListener('touchend', handleTouchEnd);
+		// 			// reset the distances
+		// 			lastDist = currDist;
+		// 			currDist = null;
+		// 		}
+		// 	}
+		// }
 
-     
+
+
+		// function handleTouchEnd(evt) {
+		// 	// reset the distances and scaling factor
+		// 	lastDist = null;
+		// 	currDist = null;
+		// 	scaleFactor = 1;
+		// }
+
+		// function getTouchDistance(touches) {
+		// 	const x1 = touches[0].pageX;
+		// 	const y1 = touches[0].pageY;
+		// 	const x2 = touches[1].pageX;
+		// 	const y2 = touches[1].pageY;
+
+		// 	return dist(x1, y1, x2, y2);
+		// }
+
+		// // attach the touch event listeners
+		// document.addEventListener('touchstart', handleTouchStart);
+		// document.addEventListener('touchmove', handleTouchMove);
+		// document.addEventListener('touchend', handleTouchEnd);
+		//scrollable ball
+		var dragItem = document.querySelector("#item");
+		var container = document.querySelector("#container");
+
+		var active = false;
+		var currentX;
+		var currentY;
+		var initialX;
+		var initialY;
+		var xOffset = 0;
+		var yOffset = 0;
+
+		container.addEventListener("touchstart", dragStart, false);
+		container.addEventListener("touchend", dragEnd, false);
+		container.addEventListener("touchmove", drag, false);
+
+		container.addEventListener("mousedown", dragStart, false);
+		container.addEventListener("mouseup", dragEnd, false);
+		container.addEventListener("mousemove", drag, false);
+
+		function dragStart(e) {
+			if (e.type === "touchstart") {
+				initialX = e.touches[0].clientX - xOffset;
+				initialY = e.touches[0].clientY - yOffset;
+			} else {
+				initialX = e.clientX - xOffset;
+				initialY = e.clientY - yOffset;
+			}
+
+			if (e.target === dragItem) {
+				active = true;
+			}
+		}
+
+		function dragEnd(e) {
+			initialX = currentX;
+			initialY = currentY;
+
+			active = false;
+		}
+
+		function drag(e) {
+			if (active) {
+
+				e.preventDefault();
+
+				if (e.type === "touchmove") {
+					currentX = e.touches[0].clientX - initialX;
+					currentY = e.touches[0].clientY - initialY;
+				} else {
+					currentX = e.clientX - initialX;
+					currentY = e.clientY - initialY;
+				}
+
+				xOffset = currentX;
+				yOffset = currentY;
+
+				setTranslate(currentX, currentY, dragItem);
+			}
+		}
+
+		function setTranslate(xPos, yPos, el) {
+			el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+		}
+		$("#uniqueslider1").roundSlider({
+			radius: 74.82,
+			width: 5,
+			handleSize: "+10",
+			handleShape: "dot",
+			sliderType: "min-range",
+			value: 3,
+			tooltipFormat: "tooltipVal1",
+			// drag: function (event) {
+			// 	// handle slider value changes here
+			// 	console.log("Slider value changed to:", event.value);
+			// 	o= event.value;
+			// }
+		});
+
+		let alpha1 = document.getElementById("alphaa")
+		let beta1 = document.getElementById("betaa")
+		let gamma1 = document.getElementById("gammaa")
+
+		alpha1.addEventListener('click', updatealpha);
+		beta1.addEventListener('click', updatebeta);
+		gamma1.addEventListener('click', updategamma);
+
+		function updatealpha() {
+
+			document.getElementById("uniqueslider").style.display = "none"
+			document.getElementById("uniqueslider1").style.display = "block"
+			document.getElementById("uniqueslider2").style.display = "none"
+			document.getElementById("uniqueslider3").style.display = "none"
+			this.classList.add('clicked');
+			beta1.classList.remove("clicked");
+			gamma1.classList.remove("clicked")
+			$("#uniqueslider1").roundSlider({
+				radius: 74.82,
+				width: 5,
+				handleSize: "+10",
+				handleShape: "dot",
+				sliderType: "min-range",
+				value: 3,
+				tooltipFormat: "tooltipVal1",
+				drag: function (event) {
+					// handle slider value changes here
+					console.log("Slider value changed to:", event.value);
+					o = event.value;
+				}
+			});
+			document.getElementsByClassName("constantValues")[0].classList.add("filling-button")
+		}
+
+
+		function updatebeta() {
+
+			document.getElementById("uniqueslider").style.display = "none"
+			document.getElementById("uniqueslider1").style.display = "none"
+			document.getElementById("uniqueslider2").style.display = "block"
+			document.getElementById("uniqueslider3").style.display = "none"
+			this.classList.add('clicked');
+
+			alpha1.classList.remove("clicked");
+			gamma1.classList.remove("clicked")
+
+			$("#uniqueslider2").roundSlider({
+				radius: 74.82,
+				width: 5,
+				handleSize: "+10",
+				handleShape: "dot",
+				sliderType: "min-range",
+				value: 3,
+				tooltipFormat: "tooltipVal2",
+				drag: function (event) {
+					// handle slider value changes here
+					console.log("Slider value changed to:", event.value);
+					b = event.value;
+				}
+
+			});
+
+		}
+
+
+
+		function updategamma() {
+
+			document.getElementById("uniqueslider").style.display = "none"
+			document.getElementById("uniqueslider1").style.display = "none"
+			document.getElementById("uniqueslider2").style.display = "none"
+			document.getElementById("uniqueslider3").style.display = "block"
+
+			this.classList.add('clicked');
+			alpha1.classList.remove("clicked");
+			beta1.classList.remove("clicked")
+			$("#uniqueslider3").roundSlider({
+				radius: 74.82,
+				width: 5,
+				handleSize: "+10",
+				handleShape: "dot",
+				sliderType: "min-range",
+				value: 3,
+				tooltipFormat: "tooltipVal3",
+				drag: function (event) {
+					// handle slider value changes here
+					console.log("Slider value changed to:", event.value);
+					p = event.value;
+				}
+
+			});
+
+		}
+
+		
+
+
+
+
 	</script>
 </body>
 

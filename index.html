@@ -14,14 +14,15 @@
 
 	<link rel="stylesheet" href="style.css">
 	<link href='./dm_sans/dm_sans.css' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
+	
 	<div id="#text-container"></div>
 	<div class="i-button">
 		<div id="curious">Curious to know what it is?</div>
-		<div onclick="displayContent()" class="btn"><button>i</button></div>
+		<div onclick="displayContent()" class="btn"><button id="displayContentlargescreen">i</button></div>
 	</div>
 	<div class="slider1Container">
 		<div class="sliderContainer">
@@ -35,7 +36,13 @@
 			<div id="slider3">
 				<h1>beta</h1>
 			</div>
-
+           <div class="moreInfoalphaBeta">
+			  <div class="moreInfoalphaBetaCircle">
+				<div class="contentAlpha">An alpha ,beta values influences the behaviour of a system, like a dial controlling the balance between predictable patterns and randomness. By changing these alpha,beta value, one can study how the system's behavior changes under different settings.</div>
+				<button id="skip">Skip</button>
+				<div></div>
+			  </div>
+		   </div>
 
 		</div>
 		<div class="picker">
@@ -52,7 +59,8 @@
 	<div id="outerContainer">
 		<div id="container">
 			<div id="item" onclick="displayvlueContainer()">
-
+				<i class="fa fa-gear" id="icon" style="font-size:36px;color:#3ABECB"></i>
+				<div id="x">X</div>
 			</div>
 		</div>
 	</div>
@@ -99,14 +107,20 @@
 		<div>
 
 		</div>
-
+		<div class="moreInfoalphaBetaphone">
+			<div class="moreInfoalphaBetaCirclephone">
+			  <div class="contentAlpha">An alpha ,beta values influences the behaviour of a system, like a dial controlling the balance between predictable patterns and randomness. By changing these alpha,beta value, one can study how the system's behavior changes under different settings.</div>
+			  <button id="skipphone">Skip</button>
+			  <div></div>
+			</div>
+		 </div>
 	</div>
 	<!-- <div class="i-button" onclick="displayContent()"><button>i</button></div> -->
 	<div id="content">
 		<div id="innerContent">
 
 			<div class="displayN displayns">
-				<div class="displaynoneformobile">Attractors are patterns or behaviours that systems naturally settle
+				<!-- <div class="displaynoneformobile">Attractors are patterns or behaviours that systems naturally settle
 					into over time. They can be
 					thought of as a sort of "magnetic pull" that draws a system toward a specific state or set of
 					states. In everyday life, you might see attractors in the way a pendulum swings to a stop, or how
@@ -114,17 +128,17 @@
 				<div class="img displaynoneformobile">
 					<img src="image.png" alt="img" id="img">
 				</div>
-				<div class="displaynoneformobile"><Button onclick="displayN()">Exit</Button></div>
-				
+				<div class="displaynoneformobile"><Button onclick="displayN()">Exit</Button></div> -->
+
 				<div class="displaynoneforlargerscreen">
-				
+
 					<div class="css-slider">
-					
+
 						<input id="slide-1" type="radio" name="slides" checked>
 						<section class="slide slide-one">
-							
-								<h2 id="headings">Astrophysics</h2>
-					
+
+							<h2 id="headings">Astrophysics</h2>
+
 							<nav>
 								<label for="slide-3" class="prev">&#10094;</label>
 								<label for="slide-2" class="next">&#10095;</label>
@@ -148,7 +162,8 @@
 							</nav>
 							<div class="imageContainer">
 								<div class="block imgblock"><img src="pexels-pixabay-462162.jpg" alt="" srcset=""></div>
-								<div class="block">The Ocean current analysis predicts the complex oceanic movement,imapacting climatic and marine life</div>
+								<div class="block">The Ocean current analysis predicts the complex oceanic
+									movement,imapacting climatic and marine life</div>
 							</div>
 
 						</section>
@@ -163,7 +178,8 @@
 							<div class="imageContainer">
 								<div class="block imgblock"><img src="pexels-vidal-balielo-jr-1250655.jpg" alt=""
 										srcset=""></div>
-								<div class="block">Factrol analysis detects the patterns in biological structures to diagonise diseases and monitor treatment</div>
+								<div class="block">Factrol analysis detects the patterns in biological structures to
+									diagonise diseases and monitor treatment</div>
 							</div>
 
 
@@ -185,8 +201,21 @@
 	<div id="text-container">
 		<div></div>
 	</div>
-	<div id="moreInfo">
-		<div class="moreInfo"></div>
+	
+	<div id="moreInfo1">
+		
+	    <div class="buttons">
+			<div><button id="backwardButton" onclick="changeAttractor(-1)">&larr;</button></div>
+			<div id="moreInfo">
+			
+			</div>
+			<div><button id="forwardBackword" onclick="changeAttractor(1)">&rarr;</button></div>
+	
+		</div>
+		<div class="moreInfo">
+			
+		</div>
+		
 	</div>
 	<!-- <div id="circle">
         <div id="circle1"></div>
@@ -195,16 +224,18 @@
 	<script>
 
 		let ball = false;
-        let content=false;
+		let content = false;
 		function displayContent() {
-              content=!content;
-			  if(content){
+			content = !content;
+			if (content) {
 				document.getElementById("content").style.display = "block";
 				document.getElementsByClassName("valueContainer")[0].style.display = "none";
-			  }else{
+				document.getElementById("displayContentlargescreen").innerHTML="X"
+			} else {
 				document.getElementById("content").style.display = "none";
-			  }
-			
+				document.getElementById("displayContentlargescreen").innerHTML="i"
+			}
+
 			// document.getElementById("displaynoneforlargerscreen").style.display = "block";
 
 		}
@@ -216,18 +247,34 @@
 			if (ball == true) {
 				document.getElementsByClassName("valueContainer")[0].style.display = "block";
 				document.getElementById("content").style.display = "none";
-
+				document.getElementById("icon").style.display = "none";
+				document.getElementById("x").style.display = "block";
+				
+				
+				
 			} else {
 				document.getElementsByClassName("valueContainer")[0].style.display = "none";
+				document.getElementById("icon").style.display = "block";
+				document.getElementById("x").style.display = "none";
 			}
 
 		}
+
+		
+			document.getElementById("skip").addEventListener("click",function(){
+				document.getElementsByClassName("moreInfoalphaBeta")[0].style.display="none"
+			})
+			document.getElementById("skipphone").addEventListener("click",function(){
+				document.getElementsByClassName("moreInfoalphaBetaphone")[0].style.display="none"
+				document.getElementsByClassName("valueContainer")[0].style.display="none"
+			})
 		let textfield = document.getElementById("text-container")
 
 		let textfieldmoreInfo = document.getElementById("moreInfo")
 
 		const colorPicker = document.querySelector('#colorPicker');
 		const colorPreview = document.querySelector('#colorPreview');
+
 		let o; // mathmatical constnts 
 		let b;
 		let p; //"you down with OBP (yeah you know me!)"
@@ -266,6 +313,8 @@
 		 * the trail uses the distance between the current point and the next point to decide how smooth to draw the line.
 		 * I wanted to make the trail fade to trasparent near the end, but I couldn't figure out an easy way to do that.
 		 ****************************************************************************************************************/
+
+
 		class lorenz {
 			constructor(x, y, z, h, k) {
 				this.pos = createVector(x, y, z);
@@ -401,10 +450,15 @@
 		/*******************************************
 		 * creates and sets up a new attractor shape
 		 ******************************************/
+		function changeAttractor(direction) {
+			console.log(direction)
+			aType += direction;
+			aType = newLorenz(aType);
+		}
 		function newLorenz(A) {
 			let numShapes = 4;
 
-			A = (A + 1) % numShapes; //iterates next attractor
+			A = (((A % numShapes) + numShapes) % numShapes); //iterates next attractor
 
 			let s = 1;//randomness
 			let x = 1;//direction specific randomness
@@ -502,7 +556,7 @@
 
 				case 0:
 					b = parseInt(b)
-					textfield.innerHTML = "Lorenz Attractor"
+					textfieldmoreInfo.innerHTML  = "Lorenz Attractor"
 					$("#slider1").roundSlider("setValue", o);
 					$("#slider3").roundSlider("setValue", b);
 
@@ -515,7 +569,7 @@
 				case 1:
 					b = parseInt(b)
 					// text("Chen Attractor", 0, -90);
-					textfield.innerHTML = "Chen Attractor"
+					textfieldmoreInfo.innerHTML= "Chen Attractor"
 					$("#slider1").roundSlider("setValue", o);
 					$("#slider3").roundSlider("setValue", b);
 					document.getElementById("alpha").innerHTML = o;
@@ -525,7 +579,7 @@
 				case 2:
 					b = parseInt(b)
 					// text("Modified Chua Chaotic Attractor", 0, -90);
-					textfield.innerText = "Modified Chua Chaotic Attractor"
+					textfieldmoreInfo.innerHTML = "Modified Chua Chaotic Attractor"
 					$("#slider1").roundSlider("setValue", o);
 					$("#slider3").roundSlider("setValue", b);
 					document.getElementById("alpha").innerHTML = o;
@@ -535,7 +589,7 @@
 				case 3:
 					b = parseInt(b)
 					// text("Modified Rossler Attractor", 0, -90);
-					textfield.innerText = "Modified Rossler Attractor"
+					textfieldmoreInfo.innerHTML = "Modified Rossler Attractor"
 					$("#slider1").roundSlider("setValue", o);
 					$("#slider3").roundSlider("setValue", b);
 					break;
@@ -543,7 +597,7 @@
 			textSize(textsize);
 			let sentence = "Note: This is a 3D generative model.  Drag mouse to move around. Press space bar on keyboard to generate new attractor"
 			// text(sentence.toLowerCase(), 0, 90);
-			textfieldmoreInfo.innerText = "Note: This is a 3D generative model.  Drag mouse to move around. Press space bar on keyboard to generate new attractor"
+			textfield.innerHTML="Attractor"
 			glow();
 			orbit();
 			noFill();
@@ -630,7 +684,7 @@
 		// 		p = event.value;
 		// 	}
 		// });
-         
+
 		$("#slider3").roundSlider({
 			radius: 74.82,
 			width: 5,
@@ -700,7 +754,7 @@
 			colorPreview.style.backgroundColor = color;
 			hues[0] = hue; // store the hue value in an array
 			updateColor(hues);
-			
+
 		});
 
 		colorPicker1.addEventListener('input', function () {
@@ -709,7 +763,7 @@
 			colorPreview1.style.backgroundColor = color;
 			hues[0] = hue; // store the hue value in an array
 			updateColor(hues);
-			
+
 		});
 		let zoom = 1.0; // initial zoom level
 
@@ -948,7 +1002,7 @@
 
 		}
 
-		
+
 
 
 

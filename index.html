@@ -8,13 +8,20 @@
 
 	<script src="./jquery/jquery.min.js" type="text/javascript"></script>
 	<script src="./round-slider/src/roundslider.js"></script>
+	
 	<link rel="stylesheet" type="text/css" href="./round-slider/src/roundslider.css">
 	<script src="./P5/p5.js"></script>
 	<!-- <script src="./P5/p5.sound.min.js"></script> -->
-
 	<link rel="stylesheet" href="style.css">
 	<link href='./dm_sans/dm_sans.css' rel='stylesheet'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -107,13 +114,7 @@
 		<div>
 
 		</div>
-		<div class="moreInfoalphaBetaphone">
-			<div class="moreInfoalphaBetaCirclephone">
-			  <div class="contentAlpha">An alpha ,beta values influences the behaviour of a system, like a dial controlling the balance between predictable patterns and randomness. By changing these alpha,beta value, one can study how the system's behavior changes under different settings.</div>
-			  <button id="skipphone">Skip</button>
-			  <div></div>
-			</div>
-		 </div>
+		
 	</div>
 	<!-- <div class="i-button" onclick="displayContent()"><button>i</button></div> -->
 	<div id="content">
@@ -129,72 +130,65 @@
 					<img src="image.png" alt="img" id="img">
 				</div>
 				<div class="displaynoneformobile"><Button onclick="displayN()">Exit</Button></div> -->
-
-				<div class="displaynoneforlargerscreen">
-
-					<div class="css-slider">
-
-						<input id="slide-1" type="radio" name="slides" checked>
-						<section class="slide slide-one">
-
-							<h2 id="headings">Astrophysics</h2>
-
-							<nav>
-								<label for="slide-3" class="prev">&#10094;</label>
-								<label for="slide-2" class="next">&#10095;</label>
-
-							</nav>
-							<div class="imageContainer">
-								<div class="block imgblock"><img src="nasa-rTZW4f02zY8-unsplash.jpg" alt="" srcset="">
-								</div>
-								<div class="block">Galaxies and Cosmic structures show factral patterns,used to model
-									the universe's large scale structure</div>
-							</div>
-
-						</section>
-						<input id="slide-2" type="radio" name="slides">
-						<section class="slide slide-two">
-							<h2 id="headings">Ocean Current</h2>
-							<nav>
-								<label for="slide-1" class="prev">&#10094;</label>
-								<label for="slide-3" class="next">&#10095;</label>
-
-							</nav>
-							<div class="imageContainer">
-								<div class="block imgblock"><img src="pexels-pixabay-462162.jpg" alt="" srcset=""></div>
-								<div class="block">The Ocean current analysis predicts the complex oceanic
-									movement,imapacting climatic and marine life</div>
-							</div>
-
-						</section>
-						<input id="slide-3" type="radio" name="slides">
-						<section class="slide slide-three">
-							<h2 id="headings">Medical</h2>
-							<nav>
-								<label for="slide-2" class="prev">&#10094;</label>
-								<label for="slide-1" class="next">&#10095;</label>
-
-							</nav>
-							<div class="imageContainer">
-								<div class="block imgblock"><img src="pexels-vidal-balielo-jr-1250655.jpg" alt=""
-										srcset=""></div>
-								<div class="block">Factrol analysis detects the patterns in biological structures to
-									diagonise diseases and monitor treatment</div>
-							</div>
-
-
-						</section>
-						<header>
-							<label for="slide-1" id="slide-1"></label>
-							<label for="slide-2" id="slide-2"></label>
-							<label for="slide-3" id="slide-3"></label>
-						</header>
+				<div class="carousel">
+					<div class="carousel-inner">
+						<input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+						<div class="carousel-item">
+							<h1 >Astrophysics</h1>
+							<div class="IMAGE"><img src="nasa-rTZW4f02zY8-unsplash.jpg"></div>
+							<div><P>Galaxies and Cosmic structures show factral patterns,used to model
+								the universe's large scale structure</P></div>
+								<div class="displaynoneforlargerscreen" id="factral">
+									Fractal art is a form of digital art that utilizes mathematical algorithms to create self-similar
+									patterns and structures.
+								</div> 
+						</div>
+						<input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+						<div class="carousel-item">
+							<h1>Ocean Current</h1>
+							<div class="IMAGE"><img src="pexels-pixabay-462162.jpg"></div>
+                              <div><p>The Ocean current analysis predicts the complex oceanic
+								movement,imapacting climatic and marine life</p></div>
+								<div class="displaynoneforlargerscreen" id="factral">
+									Fractal art is a form of digital art that utilizes mathematical algorithms to create self-similar
+									patterns and structures.
+								</div> 
+						</div>
+						<input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+						<div class="carousel-item">
+							<h1>Medical</h1>
+							<div class="IMAGE"><img src="pexels-vidal-balielo-jr-1250655.jpg"></div>
+							<div><p>The Ocean current analysis predicts the complex oceanic
+								movement,imapacting climatic and marine life</p></div>
+								<div class="displaynoneforlargerscreen" id="factral">
+									Fractal art is a form of digital art that utilizes mathematical algorithms to create self-similar
+									patterns and structures.
+								</div> 
+						</div>
+						<label for="carousel-3" class="carousel-control prev control-1" id="arrowbutton">‹</label>
+						<label for="carousel-2" class="carousel-control next control-1" id="arrowbutton" >›</label>
+						<label for="carousel-1" class="carousel-control prev control-2" id="arrowbutton">‹</label>
+						<label for="carousel-3" class="carousel-control next control-2" id="arrowbutton">›</label>
+						<label for="carousel-2" class="carousel-control prev control-3" id="arrowbutton">‹</label>
+						<label for="carousel-1" class="carousel-control next control-3" id="arrowbutton">›</label>
+						<!-- <ol class="carousel-indicators">
+							<li>
+								<label for="carousel-1" class="carousel-bullet">•</label>
+							</li>
+							<li>
+								<label for="carousel-2" class="carousel-bullet">•</label>
+							</li>
+							<li>
+								<label for="carousel-3" class="carousel-bullet">•</label>
+							</li>
+						</ol> -->
 					</div>
+					<!-- <div class="displaynoneforlargerscreen" id="factral">
+						Fractal art is a form of digital art that utilizes mathematical algorithms to create self-similar
+						patterns and structures.
+					</div>  -->
 				</div>
-				<div class="displaynoneforlargerscreen">
-					Fractal art is a form of digital art that utilizes mathematical algorithms to create self-similar
-					patterns and structures.
-				</div>
+				
 			</div>
 		</div>
 	</div>
@@ -220,11 +214,18 @@
 	<!-- <div id="circle">
         <div id="circle1"></div>
 	</div> -->
-
+	<div class="moreInfoalphaBetaphone">
+		<div class="moreInfoalphaBetaCirclephone">
+		  <div class="contentAlpha">An alpha ,beta values influences the behaviour of a system, like a dial controlling the balance between predictable patterns and randomness. By changing these alpha,beta value, one can study how the system's behavior changes under different settings.</div>
+		  <button id="skipphone">Skip</button>
+		  <div></div>
+		</div>
+	 </div>
 	<script>
-
+      
 		let ball = false;
 		let content = false;
+		
 		function displayContent() {
 			content = !content;
 			if (content) {
@@ -670,21 +671,6 @@
 			return val;
 		}
 
-
-		// $("#slider2").roundSlider({
-		// 	radius: 74.82,
-		// 	width: 5,
-		// 	handleSize: "+10",
-		// 	handleShape: "dot",
-		// 	sliderType: "min-range",
-		// 	value: 0,
-		// 	drag: function (event) {
-		// 		// handle slider value changes here
-		// 		console.log("Slider value changed to:", event.value);
-		// 		p = event.value;
-		// 	}
-		// });
-
 		$("#slider3").roundSlider({
 			radius: 74.82,
 			width: 5,
@@ -692,14 +678,14 @@
 			handleShape: "dot",
 			sliderType: "min-range",
 			value: 3,
-			tooltipFormat: "tooltipVal2",
+			tooltipFormat: "tooltipVal10",
 			drag: function (event) {
 				// handle slider value changes here
 				console.log("Slider value changed to:", event.value);
 				b = event.value;
 			}
 		});
-		function tooltipVal2(args) {
+		function tooltipVal10(args) {
 			if (b == undefined) {
 				var val = "beta" + " " + 3
 			}
@@ -1001,8 +987,76 @@
 			});
 
 		}
+		// Master DOManipulator v2 ------------------------------------------------------------
+const items = document.querySelectorAll('.item'),
+  controls = document.querySelectorAll('.control'),
+  headerItems = document.querySelectorAll('.item-header'),
+  descriptionItems = document.querySelectorAll('.item-description'),
+  activeDelay = .76,
+  interval = 5000;
 
+let current = 0;
 
+const slider = {
+  init: () => {
+    controls.forEach(control => control.addEventListener('click', (e) => { slider.clickedControl(e) }));
+    controls[current].classList.add('active');
+    items[current].classList.add('active');
+  },
+  nextSlide: () => { // Increment current slide and add active class
+    slider.reset();
+    if (current === items.length - 1) current = -1; // Check if current slide is last in array
+    current++;
+    controls[current].classList.add('active');
+    items[current].classList.add('active');
+    slider.transitionDelay(headerItems);
+    slider.transitionDelay(descriptionItems);
+  },
+  clickedControl: (e) => { // Add active class to clicked control and corresponding slide
+    slider.reset();
+    clearInterval(intervalF);
+
+    const control = e.target,
+      dataIndex = Number(control.dataset.index);
+
+    control.classList.add('active');
+    items.forEach((item, index) => { 
+      if (index === dataIndex) { // Add active class to corresponding slide
+        item.classList.add('active');
+      }
+    })
+    current = dataIndex; // Update current slide
+    slider.transitionDelay(headerItems);
+    slider.transitionDelay(descriptionItems);
+    intervalF = setInterval(slider.nextSlide, interval); // Fire that bad boi back up
+  },
+  reset: () => { // Remove active classes
+    items.forEach(item => item.classList.remove('active'));
+    controls.forEach(control => control.classList.remove('active'));
+  },
+  transitionDelay: (items) => { // Set incrementing css transition-delay for .item-header & .item-description, .vertical-part, b elements
+    let seconds;
+    
+    items.forEach(item => {
+      const children = item.childNodes; // .vertical-part(s)
+      let count = 1,
+        delay;
+      
+      item.classList.value === 'item-header' ? seconds = .015 : seconds = .007;
+
+      children.forEach(child => { // iterate through .vertical-part(s) and style b element
+        if (child.classList) {
+          item.parentNode.classList.contains('active') ? delay = count * seconds + activeDelay : delay = count * seconds;
+          child.firstElementChild.style.transitionDelay = `${delay}s`; // b element
+          count++;
+        }
+      })
+    })
+  },
+}
+
+let intervalF = setInterval(slider.nextSlide, interval);
+slider.init();
 
 
 
@@ -1011,3 +1065,71 @@
 </body>
 
 </html>
+
+
+
+<!-- <div class="displaynoneforlargerscreen">
+
+	<div class="css-slider">
+
+		<input id="slide-1" type="radio" name="slides" checked>
+		<section class="slide slide-one">
+
+			<h2 id="headings">Astrophysics</h2>
+
+			<nav>
+				<label for="slide-3" class="prev">&#10094;</label>
+				<label for="slide-2" class="next">&#10095;</label>
+
+			</nav>
+			<div class="imageContainer">
+				<div class="block imgblock"><img src="nasa-rTZW4f02zY8-unsplash.jpg" alt="" srcset="">
+				</div>
+				<div class="block">Galaxies and Cosmic structures show factral patterns,used to model
+					the universe's large scale structure</div>
+			</div>
+
+		</section>
+		<input id="slide-2" type="radio" name="slides">
+		<section class="slide slide-two">
+			<h2 id="headings">Ocean Current</h2>
+			<nav>
+				<label for="slide-1" class="prev">&#10094;</label>
+				<label for="slide-3" class="next">&#10095;</label>
+
+			</nav>
+			<div class="imageContainer">
+				<div class="block imgblock"><img src="pexels-pixabay-462162.jpg" alt="" srcset=""></div>
+				<div class="block">The Ocean current analysis predicts the complex oceanic
+					movement,imapacting climatic and marine life</div>
+			</div>
+
+		</section>
+		<input id="slide-3" type="radio" name="slides">
+		<section class="slide slide-three">
+			<h2 id="headings">Medical</h2>
+			<nav>
+				<label for="slide-2" class="prev">&#10094;</label>
+				<label for="slide-1" class="next">&#10095;</label>
+
+			</nav>
+			<div class="imageContainer">
+				<div class="block imgblock"><img src="pexels-vidal-balielo-jr-1250655.jpg" alt=""
+						srcset=""></div>
+				<div class="block">Factrol analysis detects the patterns in biological structures to
+					diagonise diseases and monitor treatment</div>
+			</div>
+
+
+		</section>
+		<header>
+			<label for="slide-1" id="slide-1"></label>
+			<label for="slide-2" id="slide-2"></label>
+			<label for="slide-3" id="slide-3"></label>
+		</header>
+	</div>
+</div>
+<div class="displaynoneforlargerscreen">
+	Fractal art is a form of digital art that utilizes mathematical algorithms to create self-similar
+	patterns and structures.
+</div> -->

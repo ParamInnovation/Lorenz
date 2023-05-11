@@ -35,7 +35,7 @@ canvas {
 }
 
 .sliderContainer {
-  height: 60%;
+  height: 90%;
   position: fixed;
   left: 2%;
   display: flex;
@@ -70,6 +70,12 @@ h1 {
   border-color: none;
   cursor: pointer;
 
+
+}
+
+#slider2{
+  left:-45%;
+  top:5%;
 }
 
 #slider1 .rs-range-color {
@@ -90,6 +96,40 @@ h1 {
 }
 
 #slider1 .rs-bg-color {
+  background-color: black;
+}
+
+.rs-border {
+  border: none;
+}
+
+
+
+
+#slider2 .rs-container {
+  border-color: none;
+  cursor: pointer;
+
+}
+
+#slider2 .rs-range-color {
+  background: linear-gradient(90deg, #9DE5EC 0%, #9DE5EC 100%);
+}
+
+#slider2 .rs-path-color {
+  background: white;
+}
+
+#slider2 .rs-handle {
+  background: radial-gradient(ellipse at center, white 0%, white 34%, white 100%);
+  cursor: pointer;
+}
+
+#slider2 .rs-tooltip-text {
+  color: #9DE5EC;
+}
+
+#slider2 .rs-bg-color {
   background-color: black;
 }
 
@@ -232,39 +272,6 @@ h1 {
 
 
 
-
-#slider2 {
-
-  transform: translate(-50%, -50%);
-}
-
-#slider2 .rs-range-color {
-  background: linear-gradient(90deg, #9DE5EC 0%, #9DE5EC 100%);
-}
-
-#slider2 .rs-path-color {
-  background: white;
-}
-
-#slider2 .rs-handle {
-  background: radial-gradient(ellipse at center, white 0%, white 34%, white 100%);
-}
-
-.rs-tooltip-text {
-
-  font-size: 20px;
-
-}
-
-#slider2 .rs-tooltip-text {
-  color: #9DE5EC;
-  font-weight: 700;
-  font-size: 200px;
-}
-
-#uniqueslider1 {
-  display: none;
-}
 
 #slider3 {
   /* position: absolute;
@@ -470,7 +477,7 @@ button {
 .moreInfoalphaBeta{
   position:absolute;
   width: 95%;
-  top:73%;
+  top:55%;
   height: 25%;
   display: flex;
   justify-content: center;
@@ -1650,4 +1657,55 @@ img {
   
 
 }
+
+#slider2{
+  top:0%;
+}
+}
+/* 
+
+#slider2 {
+
+  transform: translate(-50%, -50%);
+}
+
+#slider2 .rs-range-color {
+  background: linear-gradient(90deg, #9DE5EC 0%, #9DE5EC 100%);
+}
+
+#slider2 .rs-path-color {
+  background: white;
+}
+
+#slider2 .rs-handle {
+  background: radial-gradient(ellipse at center, white 0%, white 34%, white 100%);
+}
+
+.rs-tooltip-text {
+
+  font-size: 20px;
+
+}
+
+#slider2 .rs-tooltip-text {
+  color: #9DE5EC;
+  font-weight: 700;
+  font-size: 200px;
+}
+
+#uniqueslider1 {
+  display: none;
+} */
+@media screen and (max-width: 2560px) {
+  #slider2{
+    top:0;
+  }
+  .moreInfoalphaBeta{
+     height: auto;
+  }
+}
+@media screen and (max-width: 769px) {
+    #slider2{
+      top:0%
+    }
 }

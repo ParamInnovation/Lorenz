@@ -8,24 +8,21 @@
 
 	<script src="./jquery/jquery.min.js" type="text/javascript"></script>
 	<script src="./round-slider/src/roundslider.js"></script>
-	
+
 	<link rel="stylesheet" type="text/css" href="./round-slider/src/roundslider.css">
 	<script src="./P5/p5.js"></script>
 	<!-- <script src="./P5/p5.sound.min.js"></script> -->
 	<link rel="stylesheet" href="style.css">
 	<link href='./dm_sans/dm_sans.css' rel='stylesheet'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 </head>
 
 <body>
-	
+
 	<div id="#text-container"></div>
 	<div class="i-button">
 		<div id="curious">Curious to know what it is?</div>
@@ -36,20 +33,24 @@
 			<div id="slider1">
 				<h1>alpha</h1>
 			</div>
-			<!-- <div id="slider2">
-				<h1>color</h1>
-				
-			</div> -->
+			
 			<div id="slider3">
 				<h1>beta</h1>
 			</div>
-           <div class="moreInfoalphaBeta">
-			  <div class="moreInfoalphaBetaCircle">
-				<div class="contentAlpha">An alpha ,beta values influences the behaviour of a system, like a dial controlling the balance between predictable patterns and randomness. By changing these alpha,beta value, one can study how the system's behavior changes under different settings.</div>
-				<button id="skip">Skip</button>
-				<div></div>
-			  </div>
-		   </div>
+			<div id="slider2">
+				<h1>gamma</h1>
+				
+			</div>
+			<div class="moreInfoalphaBeta">
+				<div class="moreInfoalphaBetaCircle">
+					<div class="contentAlpha">An alpha ,beta values influences the behaviour of a system, like a dial
+						controlling the balance between predictable patterns and randomness. By changing these
+						alpha,beta value, one can study how the system's behavior changes under different settings.
+					</div>
+					<button id="skip">Skip</button>
+					<div></div>
+				</div>
+			</div>
 
 		</div>
 		<div class="picker">
@@ -114,7 +115,7 @@
 		<div>
 
 		</div>
-		
+
 	</div>
 	<!-- <div class="i-button" onclick="displayContent()"><button>i</button></div> -->
 	<div id="content">
@@ -132,41 +133,53 @@
 				<div class="displaynoneformobile"><Button onclick="displayN()">Exit</Button></div> -->
 				<div class="carousel">
 					<div class="carousel-inner">
-						<input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+						<input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true"
+							hidden="" checked="checked">
 						<div class="carousel-item">
-							<h1 >Astrophysics</h1>
+							<h1>Astrophysics</h1>
 							<div class="IMAGE"><img src="nasa-rTZW4f02zY8-unsplash.jpg"></div>
-							<div><P>Galaxies and Cosmic structures show factral patterns,used to model
-								the universe's large scale structure</P></div>
-								<div class="displaynoneforlargerscreen" id="factral">
-									Fractal art is a form of digital art that utilizes mathematical algorithms to create self-similar
-									patterns and structures.
-								</div> 
+							<div>
+								<P>Galaxies and Cosmic structures show factral patterns,used to model
+									the universe's large scale structure</P>
+							</div>
+							<div class="displaynoneforlargerscreen" id="factral">
+								Fractal art is a form of digital art that utilizes mathematical algorithms to create
+								self-similar
+								patterns and structures.
+							</div>
 						</div>
-						<input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+						<input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true"
+							hidden="">
 						<div class="carousel-item">
 							<h1>Ocean Current</h1>
 							<div class="IMAGE"><img src="pexels-pixabay-462162.jpg"></div>
-                              <div><p>The Ocean current analysis predicts the complex oceanic
-								movement,imapacting climatic and marine life</p></div>
-								<div class="displaynoneforlargerscreen" id="factral">
-									Fractal art is a form of digital art that utilizes mathematical algorithms to create self-similar
-									patterns and structures.
-								</div> 
+							<div>
+								<p>The Ocean current analysis predicts the complex oceanic
+									movement,imapacting climatic and marine life</p>
+							</div>
+							<div class="displaynoneforlargerscreen" id="factral">
+								Fractal art is a form of digital art that utilizes mathematical algorithms to create
+								self-similar
+								patterns and structures.
+							</div>
 						</div>
-						<input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+						<input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true"
+							hidden="">
 						<div class="carousel-item">
 							<h1>Medical</h1>
 							<div class="IMAGE"><img src="pexels-vidal-balielo-jr-1250655.jpg"></div>
-							<div><p>The Ocean current analysis predicts the complex oceanic
-								movement,imapacting climatic and marine life</p></div>
-								<div class="displaynoneforlargerscreen" id="factral">
-									Fractal art is a form of digital art that utilizes mathematical algorithms to create self-similar
-									patterns and structures.
-								</div> 
+							<div>
+								<p>The Ocean current analysis predicts the complex oceanic
+									movement,imapacting climatic and marine life</p>
+							</div>
+							<div class="displaynoneforlargerscreen" id="factral">
+								Fractal art is a form of digital art that utilizes mathematical algorithms to create
+								self-similar
+								patterns and structures.
+							</div>
 						</div>
 						<label for="carousel-3" class="carousel-control prev control-1" id="arrowbutton">‹</label>
-						<label for="carousel-2" class="carousel-control next control-1" id="arrowbutton" >›</label>
+						<label for="carousel-2" class="carousel-control next control-1" id="arrowbutton">›</label>
 						<label for="carousel-1" class="carousel-control prev control-2" id="arrowbutton">‹</label>
 						<label for="carousel-3" class="carousel-control next control-2" id="arrowbutton">›</label>
 						<label for="carousel-2" class="carousel-control prev control-3" id="arrowbutton">‹</label>
@@ -188,53 +201,55 @@
 						patterns and structures.
 					</div>  -->
 				</div>
-				
+
 			</div>
 		</div>
 	</div>
 	<div id="text-container">
 		<div></div>
 	</div>
-	
+
 	<div id="moreInfo1">
-		
-	    <div class="buttons">
+
+		<div class="buttons">
 			<div><button id="backwardButton" onclick="changeAttractor(-1)">&larr;</button></div>
 			<div id="moreInfo">
-			
+
 			</div>
 			<div><button id="forwardBackword" onclick="changeAttractor(1)">&rarr;</button></div>
-	
+
 		</div>
 		<div class="moreInfo">
-			
+
 		</div>
-		
+
 	</div>
 	<!-- <div id="circle">
         <div id="circle1"></div>
 	</div> -->
 	<div class="moreInfoalphaBetaphone">
 		<div class="moreInfoalphaBetaCirclephone">
-		  <div class="contentAlpha">An alpha ,beta values influences the behaviour of a system, like a dial controlling the balance between predictable patterns and randomness. By changing these alpha,beta value, one can study how the system's behavior changes under different settings.</div>
-		  <button id="skipphone">Skip</button>
-		  <div></div>
+			<div class="contentAlpha">An alpha ,beta values influences the behaviour of a system, like a dial
+				controlling the balance between predictable patterns and randomness. By changing these alpha,beta value,
+				one can study how the system's behavior changes under different settings.</div>
+			<button id="skipphone">Skip</button>
+			<div></div>
 		</div>
-	 </div>
+	</div>
 	<script>
-      
+
 		let ball = false;
 		let content = false;
-		
+
 		function displayContent() {
 			content = !content;
 			if (content) {
 				document.getElementById("content").style.display = "block";
 				document.getElementsByClassName("valueContainer")[0].style.display = "none";
-				document.getElementById("displayContentlargescreen").innerHTML="X"
+				document.getElementById("displayContentlargescreen").innerHTML = "X"
 			} else {
 				document.getElementById("content").style.display = "none";
-				document.getElementById("displayContentlargescreen").innerHTML="i"
+				document.getElementById("displayContentlargescreen").innerHTML = "i"
 			}
 
 			// document.getElementById("displaynoneforlargerscreen").style.display = "block";
@@ -250,9 +265,9 @@
 				document.getElementById("content").style.display = "none";
 				document.getElementById("icon").style.display = "none";
 				document.getElementById("x").style.display = "block";
-				
-				
-				
+
+
+
 			} else {
 				document.getElementsByClassName("valueContainer")[0].style.display = "none";
 				document.getElementById("icon").style.display = "block";
@@ -261,14 +276,14 @@
 
 		}
 
-		
-			document.getElementById("skip").addEventListener("click",function(){
-				document.getElementsByClassName("moreInfoalphaBeta")[0].style.display="none"
-			})
-			document.getElementById("skipphone").addEventListener("click",function(){
-				document.getElementsByClassName("moreInfoalphaBetaphone")[0].style.display="none"
-				document.getElementsByClassName("valueContainer")[0].style.display="none"
-			})
+
+		document.getElementById("skip").addEventListener("click", function () {
+			document.getElementsByClassName("moreInfoalphaBeta")[0].style.display = "none"
+		})
+		document.getElementById("skipphone").addEventListener("click", function () {
+			document.getElementsByClassName("moreInfoalphaBetaphone")[0].style.display = "none"
+			document.getElementsByClassName("valueContainer")[0].style.display = "none"
+		})
 		let textfield = document.getElementById("text-container")
 
 		let textfieldmoreInfo = document.getElementById("moreInfo")
@@ -279,10 +294,15 @@
 		let o; // mathmatical constnts 
 		let b;
 		let p; //"you down with OBP (yeah you know me!)"
-
-		const num = 100; //number of points
+		let q;
+		let d;
+		let e;
+		let r;
+		let f;
+		let g;
+		const num = 200; //number of points
 		const tsize = 400; //length of point tails
-		const waitTime = 35 * 30; //time between each shape (seconds * FPS)
+		const waitTime = 3 * 30; //time between each shape (seconds * FPS)
 		let a = []; // array of points
 
 		let font;
@@ -354,7 +374,37 @@
 						p = 0.1;
 						b = 14;
 						break;
-
+					case 4://Hadley
+						o = 0.2;
+						p = 4;
+						b=8;
+						g=1;
+						
+						break;
+					case 5://THREE-SCROLL UNIFIED CHAOTIC SYSTEM
+						o = 32.48;
+						p = 45.84;
+                        b=1.18;
+                        d=0.13;
+						e=0.57;
+						f=14.7;
+						break;
+					case 6://HALVORSEN
+						o = 2;
+						break;
+					case 7://RABINOVICH-FABRIKANT
+						o = 1;
+						b = 8;
+						f = 5;
+						g = 5;
+						break;
+					case 8://DADRAS
+						o = 3;
+						p = 3;
+						b = 2;
+						q = 2;
+						r = 9;
+						break;
 				}
 			}
 
@@ -387,7 +437,32 @@
 							this.pos.y + t * (this.pos.x + (o * this.pos.y)),
 							this.pos.z + t * (p + this.pos.z * (this.pos.x - b)));
 						break;
+					case 4://Hadley
+						this.dV.set(this.pos.x + t * (-(this.pos.y*this.pos.y)-(this.pos.z*this.pos.z)-(o*this.pos.x)+(o*b)),
+							this.pos.y + t * ( (this.pos.x* this.pos.y)-(p*this.pos.x*this.pos.z)-(this.pos.y)+g),
+							this.pos.z + t * ((p*this.pos.x*this.pos.y)+(this.pos.x*this.pos.z)-this.pos.z));
+						break;
+					case 5://THREE-SCROLL UNIFIED CHAOTIC SYSTEM
+						this.dV.set(this.pos.x + t * ((o*(this.pos.y-this.pos.x)) + (d * this.pos.x * this.pos.z)),
+							this.pos.y + t * ( (p* this.pos.x) - (this.pos.x* this.pos.z)+ f*this.pos.y), this.pos.z + t * (b*this.pos.z +(this.pos.x*this.pos.y) -  (e*this.pos.x* this.pos.x)))
+						break;
+					case 6:  //HALVORSEN
+						this.dV.set(this.pos.x + t * (-o * this.pos.x - 4 * this.pos.y - 4 * this.pos.z - (this.pos.y * this.pos.y)),
+							this.pos.y + t * (-o * this.pos.y - (4 * this.pos.z) - (4 * this.pos.x) - (this.pos.z * this.pos.z)),
+							this.pos.z + t * ((-o * this.pos.z) - (4 * this.pos.x) - (4 * this.pos.y) - (this.pos.x * this.pos.x)));
+						break;
+					case 7:  //LORENZ83
+						this.dV.set(this.pos.x + t *((-o*this.pos.x )-(this.pos.y*this.pos.y) -(this.pos.z*this.pos.z)+ o * f),
+							this.pos.y + t * (-this.pos.y + (this.pos.x * this.pos.y ) - (b * this.pos.x * this.pos.z) +g),
+							this.pos.z + t * ((-this.pos.z ) +(b * this.pos.x * this.pos.y)+(this.pos.x * this.pos.z)));
+						break;
+					case 8://DADRAS
+						this.dV.set(this.pos.x + t * (this.pos.y - o * this.pos.x + p * this.pos.y * this.pos.z),
+							this.pos.y + t * (b * this.pos.y - (this.pos.x * this.pos.z) - this.pos.z),
+							this.pos.z + t * ((q * this.pos.x * this.pos.y) - (r * this.pos.z)));
+						break;
 				}
+
 				this.pos.set(this.dV);
 			}
 
@@ -457,7 +532,7 @@
 			aType = newLorenz(aType);
 		}
 		function newLorenz(A) {
-			let numShapes = 4;
+			let numShapes = 9;
 
 			A = (((A % numShapes) + numShapes) % numShapes); //iterates next attractor
 
@@ -487,6 +562,39 @@
 				y = 20;
 				z = 0;
 				sspeed = 0.002;
+			} else if (A == 4) {
+				s = 1;
+				x = 20;
+				y = 20;
+				z = 0;
+				sspeed = 0.0005;
+			} else if (A == 5) {
+				s = -3;
+				
+				x = 3;
+				y = 2;
+				z = -1;
+				sspeed = 0.0001;
+
+			} else if (A == 6) {
+				s = 1;
+				x = 20;
+				y = 20;
+				z = 0;
+				sspeed = 0.002;
+			} else if (A == 7) {
+				s = 1;
+				x = 10;
+				y = 10;
+				z = 0;
+				sspeed = 0.0005;
+			}
+			else if (A == 8) {
+				s = 1;
+				x = 10;
+				y = 10;
+				z = 0;
+				sspeed = 0.0005;
 			}
 
 			//make new attractor with randomized colors
@@ -532,7 +640,7 @@
 		}
 
 		let time = waitTime + 1;
-		let aType = -1;
+		let aType = 0;
 		let sspeed;
 
 		function draw() {
@@ -557,10 +665,10 @@
 
 				case 0:
 					b = parseInt(b)
-					textfieldmoreInfo.innerHTML  = "Lorenz Attractor"
+					textfieldmoreInfo.innerHTML = "Lorenz Attractor"
 					$("#slider1").roundSlider("setValue", o);
 					$("#slider3").roundSlider("setValue", b);
-
+                    $("#slider2").roundSlider("setValue", p);
 					document.getElementById("alpha").innerHTML = o;
 					document.getElementById("beta").innerHTML = b;
 					document.getElementById("gamma").innerHTML = p;
@@ -570,12 +678,13 @@
 				case 1:
 					b = parseInt(b)
 					// text("Chen Attractor", 0, -90);
-					textfieldmoreInfo.innerHTML= "Chen Attractor"
+					textfieldmoreInfo.innerHTML = "Chen Attractor"
 					$("#slider1").roundSlider("setValue", o);
 					$("#slider3").roundSlider("setValue", b);
+					$("#slider2").roundSlider("setValue", p);
 					document.getElementById("alpha").innerHTML = o;
-					document.getElementById("beta").innerHTML = b;
-					document.getElementById("gamma").innerHTML = p;
+					document.getElementById("beta").innerHTML = p;
+					document.getElementById("gamma").innerHTML = b;
 					break;
 				case 2:
 					b = parseInt(b)
@@ -583,9 +692,10 @@
 					textfieldmoreInfo.innerHTML = "Modified Chua Chaotic Attractor"
 					$("#slider1").roundSlider("setValue", o);
 					$("#slider3").roundSlider("setValue", b);
+					$("#slider2").roundSlider("setValue", p);
 					document.getElementById("alpha").innerHTML = o;
-					document.getElementById("beta").innerHTML = b;
-					document.getElementById("gamma").innerHTML = p;
+					document.getElementById("beta").innerHTML = p;
+					document.getElementById("gamma").innerHTML = b;
 					break;
 				case 3:
 					b = parseInt(b)
@@ -593,12 +703,71 @@
 					textfieldmoreInfo.innerHTML = "Modified Rossler Attractor"
 					$("#slider1").roundSlider("setValue", o);
 					$("#slider3").roundSlider("setValue", b);
+					$("#slider2").roundSlider("setValue", p);
+					document.getElementById("alpha").innerHTML = o;
+					document.getElementById("beta").innerHTML = p;
+					document.getElementById("gamma").innerHTML = b;
+					break;
+				case 4:
+					b = parseInt(b)
+					// text("Modified Rossler Attractor", 0, -90);
+					textfieldmoreInfo.innerHTML = "Hadley"
+					$("#slider1").roundSlider("setValue", o);
+					$("#slider3").roundSlider("setValue", b);
+					$("#slider2").roundSlider("setValue", p);
+					document.getElementById("alpha").innerHTML = o;
+					document.getElementById("beta").innerHTML = p;
+					document.getElementById("gamma").innerHTML = b;
+					break;
+				case 5:
+					b = parseInt(b)
+					// text("Modified Rossler Attractor", 0, -90);
+					textfieldmoreInfo.innerHTML = "THREE-SCROLL UNIFIED CHAOTIC SYSTEM"
+					$("#slider1").roundSlider("setValue", o);
+					$("#slider3").roundSlider("setValue", b);
+					$("#slider2").roundSlider("setValue", p);
+					document.getElementById("alpha").innerHTML = o;
+					document.getElementById("beta").innerHTML = p;
+					document.getElementById("gamma").innerHTML = b;
+					break;
+				case 6:
+					b = parseInt(b)
+					// text("Modified Rossler Attractor", 0, -90);
+					textfieldmoreInfo.innerHTML = "HALVORSEN"
+					$("#slider1").roundSlider("setValue", o);
+					$("#slider3").roundSlider("setValue", b);
+					$("#slider2").roundSlider("setValue", p);
+					document.getElementById("alpha").innerHTML = o;
+					document.getElementById("beta").innerHTML = p;
+					document.getElementById("gamma").innerHTML = b;
+					break;
+				case 7:
+					b = parseInt(b)
+					// text("Modified Rossler Attractor", 0, -90);
+					textfieldmoreInfo.innerHTML = "RABINOVICH-FABRIKANT"
+					$("#slider1").roundSlider("setValue", o);
+					$("#slider3").roundSlider("setValue", b);
+					$("#slider2").roundSlider("setValue", p);
+					document.getElementById("alpha").innerHTML = o;
+					document.getElementById("beta").innerHTML = p;
+					document.getElementById("gamma").innerHTML = b;
+					break;
+				case 8:
+					b = parseInt(b)
+					// text("Modified Rossler Attractor", 0, -90);
+					textfieldmoreInfo.innerHTML = "DADRAS"
+					$("#slider1").roundSlider("setValue", o);
+					$("#slider3").roundSlider("setValue", b);
+					$("#slider2").roundSlider("setValue", p);
+					document.getElementById("alpha").innerHTML = o;
+					document.getElementById("beta").innerHTML = p;
+					document.getElementById("gamma").innerHTML = b;
 					break;
 			}
 			textSize(textsize);
 			let sentence = "Note: This is a 3D generative model.  Drag mouse to move around. Press space bar on keyboard to generate new attractor"
 			// text(sentence.toLowerCase(), 0, 90);
-			textfield.innerHTML="Attractor"
+			textfield.innerHTML = "Attractor"
 			glow();
 			orbit();
 			noFill();
@@ -691,6 +860,33 @@
 			}
 			if (b != undefined) {
 				var val = "beta" + " " + parseInt(b)
+			}
+
+
+			return val;
+		}
+
+
+		$("#slider2").roundSlider({
+			radius: 74.82,
+			width: 5,
+			handleSize: "+10",
+			handleShape: "dot",
+			sliderType: "min-range",
+			value: 3,
+			tooltipFormat: "tooltipVal20",
+			drag: function (event) {
+				// handle slider value changes here
+				console.log("Slider value changed to:", event.value);
+				p = event.value;
+			}
+		});
+		function tooltipVal20(args) {
+			if (p == undefined) {
+				var val = "gamma" + " " + 3
+			}
+			if (p != undefined) {
+				var val = "gamma" + " " + parseInt(p)
 			}
 
 
@@ -988,75 +1184,75 @@
 
 		}
 		// Master DOManipulator v2 ------------------------------------------------------------
-const items = document.querySelectorAll('.item'),
-  controls = document.querySelectorAll('.control'),
-  headerItems = document.querySelectorAll('.item-header'),
-  descriptionItems = document.querySelectorAll('.item-description'),
-  activeDelay = .76,
-  interval = 5000;
+		const items = document.querySelectorAll('.item'),
+			controls = document.querySelectorAll('.control'),
+			headerItems = document.querySelectorAll('.item-header'),
+			descriptionItems = document.querySelectorAll('.item-description'),
+			activeDelay = .76,
+			interval = 5000;
 
-let current = 0;
+		let current = 0;
 
-const slider = {
-  init: () => {
-    controls.forEach(control => control.addEventListener('click', (e) => { slider.clickedControl(e) }));
-    controls[current].classList.add('active');
-    items[current].classList.add('active');
-  },
-  nextSlide: () => { // Increment current slide and add active class
-    slider.reset();
-    if (current === items.length - 1) current = -1; // Check if current slide is last in array
-    current++;
-    controls[current].classList.add('active');
-    items[current].classList.add('active');
-    slider.transitionDelay(headerItems);
-    slider.transitionDelay(descriptionItems);
-  },
-  clickedControl: (e) => { // Add active class to clicked control and corresponding slide
-    slider.reset();
-    clearInterval(intervalF);
+		const slider = {
+			init: () => {
+				controls.forEach(control => control.addEventListener('click', (e) => { slider.clickedControl(e) }));
+				controls[current].classList.add('active');
+				items[current].classList.add('active');
+			},
+			nextSlide: () => { // Increment current slide and add active class
+				slider.reset();
+				if (current === items.length - 1) current = -1; // Check if current slide is last in array
+				current++;
+				controls[current].classList.add('active');
+				items[current].classList.add('active');
+				slider.transitionDelay(headerItems);
+				slider.transitionDelay(descriptionItems);
+			},
+			clickedControl: (e) => { // Add active class to clicked control and corresponding slide
+				slider.reset();
+				clearInterval(intervalF);
 
-    const control = e.target,
-      dataIndex = Number(control.dataset.index);
+				const control = e.target,
+					dataIndex = Number(control.dataset.index);
 
-    control.classList.add('active');
-    items.forEach((item, index) => { 
-      if (index === dataIndex) { // Add active class to corresponding slide
-        item.classList.add('active');
-      }
-    })
-    current = dataIndex; // Update current slide
-    slider.transitionDelay(headerItems);
-    slider.transitionDelay(descriptionItems);
-    intervalF = setInterval(slider.nextSlide, interval); // Fire that bad boi back up
-  },
-  reset: () => { // Remove active classes
-    items.forEach(item => item.classList.remove('active'));
-    controls.forEach(control => control.classList.remove('active'));
-  },
-  transitionDelay: (items) => { // Set incrementing css transition-delay for .item-header & .item-description, .vertical-part, b elements
-    let seconds;
-    
-    items.forEach(item => {
-      const children = item.childNodes; // .vertical-part(s)
-      let count = 1,
-        delay;
-      
-      item.classList.value === 'item-header' ? seconds = .015 : seconds = .007;
+				control.classList.add('active');
+				items.forEach((item, index) => {
+					if (index === dataIndex) { // Add active class to corresponding slide
+						item.classList.add('active');
+					}
+				})
+				current = dataIndex; // Update current slide
+				slider.transitionDelay(headerItems);
+				slider.transitionDelay(descriptionItems);
+				intervalF = setInterval(slider.nextSlide, interval); // Fire that bad boi back up
+			},
+			reset: () => { // Remove active classes
+				items.forEach(item => item.classList.remove('active'));
+				controls.forEach(control => control.classList.remove('active'));
+			},
+			transitionDelay: (items) => { // Set incrementing css transition-delay for .item-header & .item-description, .vertical-part, b elements
+				let seconds;
 
-      children.forEach(child => { // iterate through .vertical-part(s) and style b element
-        if (child.classList) {
-          item.parentNode.classList.contains('active') ? delay = count * seconds + activeDelay : delay = count * seconds;
-          child.firstElementChild.style.transitionDelay = `${delay}s`; // b element
-          count++;
-        }
-      })
-    })
-  },
-}
+				items.forEach(item => {
+					const children = item.childNodes; // .vertical-part(s)
+					let count = 1,
+						delay;
 
-let intervalF = setInterval(slider.nextSlide, interval);
-slider.init();
+					item.classList.value === 'item-header' ? seconds = .015 : seconds = .007;
+
+					children.forEach(child => { // iterate through .vertical-part(s) and style b element
+						if (child.classList) {
+							item.parentNode.classList.contains('active') ? delay = count * seconds + activeDelay : delay = count * seconds;
+							child.firstElementChild.style.transitionDelay = `${delay}s`; // b element
+							count++;
+						}
+					})
+				})
+			},
+		}
+
+		let intervalF = setInterval(slider.nextSlide, interval);
+		slider.init();
 
 
 

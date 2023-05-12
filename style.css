@@ -1603,11 +1603,11 @@ img {
   position:absolute;
   width: 85%;
   top:75%;
-  height: 18%;
+  height: 21%;
   display: flex;
   justify-content: center;
   align-items: center;
- left:7%;
+  left:7%;
   font-size: 14px;
   font-weight:100;
   z-index: 100;

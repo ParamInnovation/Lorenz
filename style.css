@@ -12,6 +12,10 @@ body {
   left: 20%;
 } */
 
+#item{
+  display: none;
+}
+
 
 .moreInfoalphaBetaphone{
   display: none;
@@ -1608,7 +1612,7 @@ img {
   justify-content: center;
   align-items: center;
   left:7%;
-  font-size: 14px;
+  font-size: 12px;
   font-weight:100;
   z-index: 100;
   
@@ -1687,6 +1691,7 @@ img {
     #slider2{
       top:0%
     }
+
 }
 
 @media screen and (width: 768px) {
@@ -1694,7 +1699,7 @@ img {
   .moreInfoalphaBeta{
     position:absolute;
     width: 95%;
-    top:70%;
+    /* top:70%; */
     height: 25%;
     display: flex;
     justify-content: center;
